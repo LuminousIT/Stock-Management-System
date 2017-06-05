@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gemplace.ctrl.SalesReport">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="basePane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="729.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FlowPane fx:id="newQuantityPane" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="729.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets right="300.0" top="100.0" />
+               </padding>
+            </FlowPane>
+            <AnchorPane fx:id="contentPane" layoutY="-1.0" prefHeight="449.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox layoutY="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <HBox prefHeight="35.0" prefWidth="269.0" styleClass="search-box" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="filterField" prefHeight="35.0" prefWidth="229.0" promptText="Search" styleClass="search-field" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <DatePicker fx:id="fromDatePicker" prefHeight="35.0" promptText="From date" />
+                              <DatePicker fx:id="toDatePicker" prefHeight="35.0" promptText="To date" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <AnchorPane layoutY="34.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+                     <children>
+                        <TableView fx:id="productTable" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="snCol" prefWidth="45.0" text="#" />
+                              <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="221.0" text="Product name" />
+                              <TableColumn fx:id="priceCol" prefWidth="106.0" text="Price" />
+                              <TableColumn fx:id="quantityCol" text="Quantity" />
+                              <TableColumn fx:id="dateCol" prefWidth="130.0" text="Date" />
+                           </columns>
+                        </TableView>
+                        <FlowPane alignment="CENTER" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <HBox fx:id="pricePane" alignment="CENTER" spacing="20.0" style="-fx-background-color: #ddd; -fx-border-width: 1px; -fx-border: 1 0 0 0;">
+                                 <children>
+                                    <Label text="Total Sales (#):">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></Label>
+                                    <Label fx:id="priceLabel" text="00.00">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

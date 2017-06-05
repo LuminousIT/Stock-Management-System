@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="295.0" style="-fx-border-color: #ddd;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gemplace.ctrl.Login">
+    <children>
+        <VBox layoutX="24.0" layoutY="61.0" prefHeight="400.0" prefWidth="296.0" spacing="20.0" style="-fx-background-color: #ededed; -fx-border-color: #ddd;" styleClass="has-bg-image">
+            <children>
+                <FlowPane alignment="CENTER" prefHeight="77.0" prefWidth="294.0" style="-fx-background-color: #ddd;">
+                    <children>
+                        <Text fill="#199918" stroke="#c6c679" strokeType="INSIDE" strokeWidth="2.0" text="PLEASE LOGIN HERE">
+                            <font>
+                                <Font name="Arial Black" size="17.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </FlowPane>
+                <VBox prefHeight="133.0" prefWidth="294.0" spacing="20.0">
+                    <children>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="30.0" prefWidth="271.0" spacing="5.0">
+                            <children>
+                                <Region prefHeight="25.0" prefWidth="25.0" styleClass="username-region" />
+                                <TextField fx:id="usernameField" onAction="#login" prefHeight="30.0" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="30.0" prefWidth="271.0" spacing="5.0">
+                            <children>
+                                <Region prefHeight="25.0" prefWidth="25.0" styleClass="password-region" />
+                                <PasswordField fx:id="passwordField" onAction="#login" prefHeight="30.0" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                    </padding>
+                </VBox>
+                <VBox>
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="73.0" prefWidth="294.0" spacing="10.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#login" styleClass="green-button" text="Login">
+                                    <padding>
+                                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                                    </padding>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#exit" styleClass="red-button" text="Exit">
+                                    <padding>
+                                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <FlowPane alignment="CENTER" prefHeight="40.0" prefWidth="294.0">
+                            <children>
+                                <Label fx:id="statusLabel" />
+                            </children>
+                        </FlowPane>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</FlowPane>

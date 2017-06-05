@@ -1,0 +1,204 @@
+
+/* 
+    Created on : Jul 3, 2016, 2:12:21 PM
+    Author     : Gemdajs
+*/
+Parent {
+    -fx-opacity: 1.0;
+}
+
+ScrollPane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-accent: transparent;
+}
+
+ListView, TableView {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:0em;
+    -fx-opacity: 0.4;
+}
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 0px 10;
+
+}
+
+.table-cell {
+    -fx-alignment: center;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";	
+    -fx-padding:0;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(50, 50, 50, .7);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0em;
+    -fx-opacity: .8;
+}
+
+.button:focused, .button,
+.toggle-button:focused, .toggle-button,
+.radio-button:focused > .radio,
+.check-box:focused > .box,
+.menu-button:focused,
+.choice-box:focused,
+.color-picker.split-button:focused > .color-picker-label,
+.combo-box-base:focused,
+.slider:focused .thumb {
+    -fx-background-insets: 0;
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+.search-button-2 {
+    -fx-background-color: #bbb;
+    -fx-background-radius: 0px;
+}
+.search-button-2:hover, .search-button-2:pressed, .search-button-2:focused {
+    -fx-base: green;
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-border-color: #bbb;
+}
+
+.search-box  {
+    -fx-border-color: #bbb;
+    -fx-border-width: 2px 0 2px 0;
+}
+
+.nav-bar > * {
+    -fx-pref-width: 205px;
+    -fx-pref-height: 35px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font: 13px 'Malgun Gothic';
+    -fx-background-color: transparent;
+    -fx-padding: 5px 20px 5px 20px;
+    -fx-cursor: hand;
+    -fx-text-fill: black;
+}
+
+.nav-bar > *:hover {
+    -fx-background-color: #ddd;
+}
+
+.nav-bar > *:pressed {
+    -fx-background-color: #aaa;
+}
+
+.header-label {
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-background-color: #bbb;
+}
+
+.text-field, .text-area {
+    -fx-border-color: #bbb;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-accent: #bbb;
+    -fx-prompt-text-fill: #999;
+}
+
+.text-area:focused {
+    -fx-prompt-text-fill: #999;
+    -fx-background-color: black, #ddd;
+    -fx-background-radius: 0;
+}
+
+.text-area .content {
+    /*the is 1px less top and bottom than TextInput because of scrollpane border */
+    -fx-padding: 7px 7px 7px 7px;
+    -fx-cursor: text;
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+}
+.text-area:focused .content {
+    -fx-border-width: 0;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.text-area:hover .content {
+    -fx-background-color: -fx-base;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.green-button {
+    -fx-base: green;
+}
+
+.orange-button {
+    -fx-base: orange;
+}
+
+.blue-button {
+    -fx-base: skyblue;
+}
+
+.red-button {
+    -fx-base: orangered;
+}
+
+.search-field {
+    -fx-padding: 0 10px 0 10px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-color: transparent; 
+    -fx-text-inner-color: black;
+    -fx-accent: #bbb;
+    -fx-border-width: 0;;
+    -fx-border-color: transparent;
+}
+.search-field:hover, .search-field:focused {
+    -fx-background-color: #ddd; 
+}
+
+.table-view .column-header {
+    -fx-text-fill: black;
+}
+
+.text-field:disabled {
+    -fx-opacity: 1.0;
+}
+
+.cart-field {
+    -fx-font-size: 30px;
+    -fx-alignment: center;
+    -fx-background-color: skyblue;
+    -fx-text-fill: black;
+}
+
+.username-region {
+    -fx-shape: "M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z";
+    -fx-background-color: navy;
+}
+
+.password-region {
+    -fx-shape: "M31.317 9.82l-3.16-3.159c-0.775-0.775-2.043-2.043-2.818-2.818l-3.16-3.159c-0.775-0.775-2.155-0.911-3.067-0.304l-8.639 5.759c-0.912 0.608-1.257 1.907-0.767 2.887l2.203 4.405c0.067 0.135 0.145 0.278 0.231 0.427l-11.142 11.142-1 7h6v-2h4v-4h4v-4h4v-2.225c0.2 0.119 0.392 0.226 0.569 0.314l4.405 2.203c0.98 0.49 2.279 0.145 2.887-0.767l5.759-8.639c0.608-0.912 0.471-2.292-0.304-3.066zM4.707 26.707l-1.414-1.414 9.737-9.737 1.414 1.414-9.737 9.737zM28.657 13.243l-1.414 1.414c-0.389 0.389-1.025 0.389-1.414 0l-8.485-8.485c-0.389-0.389-0.389-1.025 0-1.414l1.414-1.414c0.389-0.389 1.025-0.389 1.414 0l8.485 8.485c0.389 0.389 0.389 1.025 0 1.414z";
+    -fx-background-color: burlywood;
+}

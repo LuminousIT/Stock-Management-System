@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="620.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gemplace.ctrl.Base">
+    <children>
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="7.0" layoutY="7.0" prefHeight="400.0" prefWidth="206.0" style="-fx-border-color: #999; -fx-border-width: 0 1px 0  0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+                <FlowPane fx:id="navFlow" prefHeight="91.0" prefWidth="201.0" styleClass="nav-flow" vgap="5.0">
+                    <children>
+                        <TextFlow prefWidth="200.0">
+                            <children>
+                                <Text stroke="#e5e3e3" strokeType="OUTSIDE" strokeWidth="2.0" text="Stock Manager">
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                    <font>
+                                        <Font name="Arial Black" size="18.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
+                            </padding>
+                        </TextFlow>
+                  <VBox>
+                     <children>
+                              <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" styleClass="admin-nav" text="Register product" />
+                        <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" styleClass="admin-nav" text="Stock new" />
+                              <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" text="Make sales" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="nav-bar" />
+                        <String fx:value="admin-menu" />
+                     </styleClass>
+                  </VBox>
+                        <Separator prefWidth="205.0" />
+                  <VBox>
+                     <children>
+                              <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" styleClass="admin-nav" text="Sales Report" />
+                        <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" styleClass="admin-nav" text="Stock Report" />
+                              <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" text="Logout" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="nav-bar" />
+                        <String fx:value="admin-menu" />
+                     </styleClass>
+                  </VBox>
+                        <Separator prefWidth="205.0" />
+                  <VBox styleClass="nav-bar">
+                     <children>
+                              <Label mnemonicParsing="false" onMouseClicked="#gotoMenuHandler" text="About" />
+                     </children>
+                  </VBox>
+                    </children>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+        <AnchorPane fx:id="contentPane" layoutX="206.0" layoutY="8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FlowPane fx:id="loadingPane" alignment="CENTER" layoutX="14.0" layoutY="25.0" prefHeight="400.0" prefWidth="414.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@infiniteloginloader.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </FlowPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="statusPane" layoutX="10.0" layoutY="10.0" opacity="0.0" style="-fx-background-color: rgba(0, 0, 0, .7);" styleClass="side-pane" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="statusLab" text="Label" textFill="#c2be2d" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+    </children>
+</AnchorPane>

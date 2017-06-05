@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="974.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gemplace.ctrl.Stock">
+   <children>
+      <TableView fx:id="productTable" layoutX="6.0" layoutY="7.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="snCol" prefWidth="45.0" text="#" />
+          <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="229.0" text="Product name" />
+            <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="actionCol" prefWidth="111.0" text="Action" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="infoPane" prefHeight="400.0" prefWidth="288.0" style="-fx-background-color: #eee; -fx-border-color: #ddd; -fx-border-width: 0 0 0 2;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="22.0" layoutY="30.0" spacing="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <Label fx:id="nameLab" layoutX="22.0" layoutY="30.0" text="Product name here" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionLab" text="Product description here" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceLab" text="Price here">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="quantityLab" text="Quantity here">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="45.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="newQuantityField" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#addNewQuantityHandler" styleClass="green-button" text="Add quantity" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
